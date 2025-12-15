@@ -15,12 +15,12 @@ class Stack:
     def __len__(self):
         return self.__size
 
-    def push(self, value):
+    def pu(self, value):
         new_node = node.Node(value, self.__top)
         self.__top = new_node
         self.__size += 1
 
-    def pop(self):
+    def po(self):
         if self.__top is None:
             raise IndexError("pop from empty stack")
         top = self.__top
@@ -29,7 +29,7 @@ class Stack:
         self.__size -= 1
         return value
     
-    def peek(self):
+    def pe(self):
         if self.__top is None:
             raise IndexError("peek from empty stack")
         value = self.__top.get_value()
